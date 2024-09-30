@@ -1,12 +1,12 @@
 
 // doing the same thing in promise 
 const asyncHandler = (fn) => {
-    (req, res, next) => {
+    return (req, res, next) => {
         Promise.resolve(fn(req, res, next)).catch((err)=> next(err))
     }
 }
 
-
+export {asyncHandler}
 
 // const asyncHandler = (fn)=> async(ewq, res, next) => {
 //     try {
@@ -21,4 +21,3 @@ const asyncHandler = (fn) => {
 //     }
 // }
 
-export {asyncHandler}
