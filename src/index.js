@@ -24,8 +24,6 @@ connectDB()
 // 1st approach 
 
 import express from 'express'
-import app from './app';
-import app from './app';
 const app = express()
 
 //ifie
